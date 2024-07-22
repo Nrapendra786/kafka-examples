@@ -1,0 +1,13 @@
+spring:
+  application.name: events-consumer
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "io.confluent.kafka.serializers.KafkaAvroDeserializer"
+      auto-offset-reset: "earliest"
+      properties:
+        # Use Specific Record or else you get Avro GenericRecord.
+        specific.avro.reader: true
+        schema.registry.url: http://localhost:8081
+

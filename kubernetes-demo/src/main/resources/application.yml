@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: kubernetes-demo
+  cloud:
+    kubernetes:
+      client:
+        namespace: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: TRACE
+

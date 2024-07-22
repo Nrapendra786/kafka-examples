@@ -1,0 +1,14 @@
+# Kafka configuration properties for SCRAM-SHA-512 authentication and TLS transport.
+
+spring:
+  kafka:
+    bootstrap-servers: bootstrap.127.0.0.1.nip.io:443
+    security.protocol: SASL_SSL
+    ssl:
+      trust-store-location: classpath:ca.p12
+      trust-store-password: Bjkqp93OOTdL
+    producer:
+      properties:
+        sasl.mechanism: SCRAM-SHA-512
+        sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="my-user" password="fH9ZR7hEQeni4TS1VDqAZameZv1SAzdH";
+
