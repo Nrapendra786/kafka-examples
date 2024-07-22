@@ -1,1 +1,1 @@
-I created some kafka examples using Java and Spring Boot 
+Some Kafka examples using Java, Spring Boot and Docker
